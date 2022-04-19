@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<body>
+
+<div>
+
+<h1><font color="#216118" face="Verdana, Arial, MS Sans Serif">
+WhatsAPP link</font></h1>
+
+  <input id="myTxtbox" type="number" required
+       minlength="10" maxlength="12" size="10" placeholder="3418888888"> 
+  <button onclick="funcion()">WhatsAPP</button> 
+
+</div>
+    
+<p id="demo"></p>
+
+<script>
+
+function funcion() {
+
+var ando = "https://wa.me/+549" + document.getElementById("myTxtbox").value;
+
+document.getElementById("demo").innerHTML = ando;
+
+window.location.href=ando;
+}
+
+var input = document.getElementById("myTxtbox");
+
+input.focus();
+input.click();
+
+
+input.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+   event.preventDefault();
+   funcion();
+  }
+});
+
+</script>
+
+</body>
+</html>
